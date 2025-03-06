@@ -1,0 +1,13 @@
+<!-- res/drawable/register_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#BADAF4"
+                android:endColor="#ECF0F3"
+                android:angle="45"/>
+
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+</layer-list>

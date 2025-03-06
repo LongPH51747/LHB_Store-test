@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.QuanLiSP_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#ffff"
+        android:id="@+id/relative"
+        android:layout_height="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Quản lí sản phẩm"
+            android:layout_marginTop="50dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        tools:listitem="@layout/list_item_sp_admin"
+        app:layoutManager="GridLayoutManager"
+        app:spanCount="2"
+        android:id="@+id/rc_quanlisp"
+        android:layout_below="@+id/relative"
+        android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:text="+"
+            android:background="@drawable/radius"
+            android:id="@+id/btn_add_sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

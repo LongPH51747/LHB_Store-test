@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ThongKeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#ffff"
+        android:id="@+id/relative"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/tvTT"
+            android:layout_width="match_parent"
+            android:text="Thống kê"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layoutLLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative"
+        android:orientation="vertical">
+        <Button
+            android:backgroundTint="#000"
+            android:background="#000"
+            android:text="Chon Ngay"
+            android:textSize="22sp"
+            android:id="@+id/btn_pick_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:layout_marginTop="10dp"
+                android:text="Tim Kiem"
+                android:backgroundTint="#2196F3"
+                android:id="@+id/btn_search_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:text="A -> a"
+                android:backgroundTint="#E91E63"
+                android:id="@+id/btn_lon_be"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:text="a -> A"
+                android:backgroundTint="#673AB7"
+                android:id="@+id/btn_be_lon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:text="Ban Dau"
+                android:backgroundTint="#FFC107"
+                android:id="@+id/btn_trangThai_banDau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:layout_marginTop="15dp"
+        android:divider="@android:color/transparent"
+        android:layout_below="@+id/layoutLLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_thongke"/>
+</RelativeLayout>

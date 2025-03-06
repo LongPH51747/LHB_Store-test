@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Mã đơn hàng -->
+        <TextView
+            android:id="@+id/tv_ma_don_hang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã đơn: #12345"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- số lượng đơn hàng -->
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_ma_don_hang_admin"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_soluong_don_hang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="So luong: #12345"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_ten_khach_hang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_status_donhang_admin"
+            android:layout_marginTop="4dp"
+            android:text="Tên khách hàng: Nguyễn Văn A"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <!-- Ngày đặt hàng -->
+        <TextView
+            android:id="@+id/tv_ngay_dat_hang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ten_khach_hang_admin"
+            android:layout_marginTop="4dp"
+            android:text="Ngày đặt: 20/11/2024"
+            android:textColor="#676767"
+            android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Tổng giá trị đơn hàng -->
+        <TextView
+            android:id="@+id/tv_tong_gia_tri_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:layout_marginTop="8dp"
+            android:text="Tổng giá trị: 500.000đ"
+            android:textColor="#ff00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Trạng thái đơn hàng -->
+        <TextView
+            android:id="@+id/tv_status_donhang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/status_background"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Đang xử lý"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/img_sp_donhang_admin"
+            android:layout_width="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="10dp"
+            android:layout_below="@+id/tv_status_donhang_admin"
+            android:layout_height="80dp"/>
+
+        <!-- Nút "Chi tiết" -->
+        <Button
+            android:id="@+id/btn_chi_tiet_donhang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_sp_donhang_admin"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#303F9F"
+            android:text="Chi tiết"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <!-- Nút "Xác nhận" -->
+        <Button
+            android:id="@+id/btn_xac_nhan_donhang_adin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_sp_donhang_admin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/btn_chi_tiet_donhang_admin"
+            android:backgroundTint="#00796B"
+            android:text="Xác nhận"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/btn_giaohang_thanhcong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_sp_donhang_admin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/btn_chi_tiet_donhang_admin"
+            android:backgroundTint="#00796B"
+            android:text="đã giao"
+            android:visibility="gone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <!-- Nút "Hủy đơn hàng" -->
+        <Button
+            android:id="@+id/btn_huy_donhang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_sp_donhang_admin"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#D32F2F"
+            android:text="Hủy"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
